@@ -1,10 +1,10 @@
-import s from './Dialogs.module.css';
 
-export  const Dialogs = () => {
+import React from 'react';
+
+export const Dialogs = () => {
     return (
         <div>
-   Dialogs
+            Dialogs
         </div>
-    )
-}
-
+    );
+};
