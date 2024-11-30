@@ -13,7 +13,7 @@ function App  (){
       <Navbar />
      <div className="app-wrapper-content">
          <Dialogs />
-
+         <Dialogs />
      </div>
 
         {/*<Profile />*/}
