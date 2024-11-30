@@ -8,7 +8,9 @@ export const Profile = () => {
         <>
            <div className={s.content}>
         <div>
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQovFzI1OM5Y_eqSiGhVsYwVMOaOr1UDQxBvg&s' />
+          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQovFzI1OM5Y_eqSiGhVsYwVMOaOr1UDQxBvg&s'
+          alt="Avatar"
+          />
         </div>
       <div>
         ava+ description
