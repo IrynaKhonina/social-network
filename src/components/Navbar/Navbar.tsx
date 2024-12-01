@@ -1,4 +1,5 @@
 import s from './Navbar.module.css';
+import {Link} from "react-router-dom";
 
 
 
@@ -9,23 +10,22 @@ export const Navbar = () => {
             <nav className={s.nav}>
 
                 <div className={s.item}>
-                    <a href="/profile">Profile</a>
+                    <Link to ="/profile">Profile</Link>
                 </div>
 
                 <div className={s.item}>
-                    <a href="/dialogs"> Massages </a>
-                </div>
-
-
-                <div className={s.item}>
-                    <a href="/news"> News</a>
+                    <Link to ="/dialogs"> Massages </Link>
                 </div>
 
                 <div className={s.item}>
-                    <a href="/music"> Music</a>
+                    <Link to ="/news"> News</Link>
+                </div>
+
+                <div className={s.item}>
+                    <Link to ="/music"> Music</Link>
                 </div>
                 <div className={s.item}>
-                    <a href="/settings"> Settings</a>
+                    <Link to ="/settings"> Settings</Link>
                 </div>
 
             </nav>

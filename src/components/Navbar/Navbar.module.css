@@ -1,10 +1,16 @@
 
-
 .nav {
     grid-area: n;
-    background-color: rgb(9, 145, 61);
+    background-color: rgb(7, 174, 155);
+    padding: 20px;
   }
 
-  .item {
-    color: white;
-  }
+.item a {
+    color: #ffffff ;
+    text-decoration: none;
+}
+
+.item a:focus  {
+    color: #8411af;
+}
+
