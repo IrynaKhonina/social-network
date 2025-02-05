@@ -1,26 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Post } from './Post/Post';
 import s from './MyPost.module.css';
 
 type PostType = {
     id: number;
     message: string;
-    likesCount: string; // Убедитесь, что это число
+    likesCount: string;
 };
 
-export const MyPosts = () => {
-    const [newPostText, setNewPostText] = React.useState("");
+type MyPostsProps = {
+    posts: PostType[];
+};
 
-    let post: PostType[] = [
-        { id: 1, message: "Hi, how are you?", likesCount: "12" },
-        { id: 2, message: "It's my first post", likesCount: "23" },
-    ];
+export const MyPosts: React.FC<MyPostsProps> = (props) => {
+    const [newPostText, setNewPostText] = useState("");
 
-    let postsElements = post.map(p => (
+    // Исправляем использование props
+    let postsElements = props.posts.map((p) => (
         <Post
             key={p.id}
             message={p.message}
-            likesCount={p.likesCount} // Передается как число
+            likesCount={p.likesCount}
         />
     ));
 

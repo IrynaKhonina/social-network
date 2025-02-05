@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Dialogs.module.css';
-import {DialogItem} from "./DualogItem/DialogItem";
 import { Message } from "./Message/Message";
+import {DialogItem} from "./DualogItem/DialogItem";
 
 type DialogType = {
     id: number;
@@ -13,28 +13,16 @@ type MessageType = {
     message: string;
 };
 
-export const Dialogs = () => {
-    let dialogsData: DialogType[] = [
-        { id: 1, name: "Александр" },
-        { id: 2, name: "Борис" },
-        { id: 3, name: "Ирина" },
-        { id: 4, name: "Елена" },
-        { id: 5, name: "Иван" },
-        { id: 6, name: "Алексей" },
-    ];
+type DialogsProps = {
+    dialogsData: DialogType[];
+    messageData: MessageType[];
+};
 
-    let messageData: MessageType[] = [
-        { id: 1, message: "Привет" },
-        { id: 2, message: "Как дела?" },
-        { id: 3, message: "Йо" },
-        { id: 4, message: "Йо" },
-        { id: 5, message: "Йо" },
-    ];
-
-    let dialogsElements = dialogsData
+export const Dialogs: React.FC<DialogsProps> = (props) => {
+    let dialogsElements = props.dialogsData
         .map(dialog => <DialogItem key={dialog.id} id={dialog.id} name={dialog.name} />);
 
-    let messagesElements = messageData
+    let messagesElements = props.messageData
         .map(message => <Message key={message.id} message={message.message} />);
 
     return (
